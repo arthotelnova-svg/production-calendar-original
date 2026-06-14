@@ -2,6 +2,10 @@
 
 Deployed from OpenClaw session.
 
+## Documentation
+
+- Technical documentation: `docs/TECHNICAL_DOCUMENTATION.md`
+
 ## Run
 
 ```bash
