@@ -1,0 +1,17 @@
+
+> production-calendar-2026@1.0.0 test
+> cross-env NODE_ENV=test vitest run
+
+
+ RUN  v5.0.0 /root/.hermes/cache/scratch/calendar-vacation-20261112T165610Z
+
+
+ Test Files  19 passed (19)
+      Tests  132 passed (132)
+   Start at  20:08:55
+   Duration  16.09s (environment 49%, tests 23%, setup 16%, transform 7%, import 4%, worker 1%)
+
+Environment  jsdom was created 19 times · 19.46s total, 49% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

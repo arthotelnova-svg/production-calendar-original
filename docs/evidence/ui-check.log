@@ -1,0 +1,48 @@
+
+> production-calendar-2026@1.0.0 test
+> cross-env NODE_ENV=test vitest run --run test/vacation-dashboard.test.jsx
+
+
+ RUN  v5.0.0 /root/.hermes/cache/scratch/calendar-vacation-20261112T165610Z
+
+ ❯ test/vacation-dashboard.test.jsx (11 tests | 2 failed) 2198ms
+   ❯ dashboard vacation integration (11)
+     × deducts the salary share of the scheduled vacation hours instead of paying a full salary plus vacation 142ms
+     × shows received vacation money separately without adding it to income twice 97ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/vacation-dashboard.test.jsx > dashboard vacation integration > deducts the salary share of the scheduled vacation hours instead of paying a full salary plus vacation
+AssertionError: expected '20рабочих дней0часов сверх нормы0часо…' to contain '134 911,75'
+
+Expected: "134 911,75"
+Received: "20рабочих дней0часов сверх нормы0часов недоработки134 911,75 ₽итого за месяц"
+
+ ❯ test/vacation-dashboard.test.jsx:165:73
+    163|     // The erroneous expectation of a full salary plus vacation is rej…
+    164|     expect(normalize(totalLine.querySelector(".sb-val").textContent)).…
+    165|     expect(normalize(container.querySelector(".sum-grid").textContent)…
+       |                                                                         ^
+    166|
+    167|     // The vacation amount appears in exactly one breakdown line.
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  test/vacation-dashboard.test.jsx > dashboard vacation integration > shows received vacation money separately without adding it to income twice
+TypeError: Cannot read properties of null (reading 'textContent')
+ ❯ test/vacation-dashboard.test.jsx:176:73
+    174|     await waitFor(() => expect(container.querySelector(".vacation-row"…
+    175|     expect(normalize(container.querySelector(".sb-total .sb-val").text…
+    176|     expect(normalize(container.querySelector(".vacation-payment-status…
+       |                                                                         ^
+    177|     expect(normalize(container.querySelector(".vacation-payment-status…
+    178|     expect(normalize(container.querySelector(".pp .pp-sum").textConten…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 9 passed (11)
+   Start at  19:16:19
+   Duration  4.76s (tests 49%, environment 22%, transform 18%, setup 8%, import 2%)
+

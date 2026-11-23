@@ -5,15 +5,28 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000"
+    "start": "next start -H 127.0.0.1 -p 3001",
+    "test": "cross-env NODE_ENV=test vitest run",
+    "test:watch": "cross-env NODE_ENV=test vitest"
   },
   "dependencies": {
     "better-sqlite3": "11.6.0",
     "html2canvas": "^1.4.1",
-    "next": "14.2.35",
-    "next-auth": "5.0.0-beta.30",
+    "next": "15.5.23",
+    "next-auth": "5.0.0-beta.32",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "xlsx": "^0.18.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "overrides": {
+    "postcss": "8.5.26",
+    "sharp": "0.35.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "cross-env": "^10.1.0",
+    "jsdom": "^26.1.0",
+    "vitest": "^5.0.0"
   }
 }

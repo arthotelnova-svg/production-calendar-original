@@ -1,0 +1,13 @@
+
+> production-calendar-2026@1.0.0 test
+> cross-env NODE_ENV=test vitest run --run test/vacations-transaction.test.js test/vacations-route.test.js test/vacations-scope-conflicts.test.js
+
+
+ RUN  v5.0.0 /root/.hermes/cache/scratch/calendar-vacation-20261112T165610Z
+
+
+ Test Files  3 passed (3)
+      Tests  36 passed (36)
+   Start at  20:08:24
+   Duration  3.10s (environment 40%, tests 19%, setup 18%, transform 15%, import 8%)
+

@@ -1,0 +1,44 @@
+
+> production-calendar-2026@1.0.0 build
+> next build
+
+   ▲ Next.js 15.5.23
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 12.2s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/13) ...
+   Generating static pages (3/13) 
+   Generating static pages (6/13) 
+   Generating static pages (9/13) 
+ ✓ Generating static pages (13/13)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ƒ /                                      152 B         103 kB
+├ ○ /_not-found                            990 B         104 kB
+├ ƒ /api/absences                          152 B         103 kB
+├ ƒ /api/auth/[...nextauth]                152 B         103 kB
+├ ƒ /api/day-notes                         152 B         103 kB
+├ ƒ /api/day-notes/attachments             152 B         103 kB
+├ ƒ /api/day-notes/attachments/[id]        152 B         103 kB
+├ ƒ /api/overtime                          152 B         103 kB
+├ ƒ /api/settings                          152 B         103 kB
+├ ƒ /api/vacations                         152 B         103 kB
+├ ƒ /api/vacations/[id]                    152 B         103 kB
+├ ƒ /api/work-hours                        152 B         103 kB
+├ ƒ /dashboard                           20.7 kB         123 kB
+└ ƒ /login                                 152 B         103 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/41f5a719-3e88eab5da87e5f8.js  54.2 kB
+  ├ chunks/993-9422e10bce7db950.js       46.3 kB
+  └ other shared chunks (total)          2.04 kB
+
+
+ƒ Middleware                             86.2 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
